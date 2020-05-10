@@ -9,4 +9,4 @@ def test(req):
 
 def index(req):
     todos = Todos.objects.all()
-    return render(req, 'new/index.html', {})
+    return render(req, 'new/index.html', {'todos': todos})

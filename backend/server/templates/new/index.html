@@ -1,3 +1,12 @@
 <html>
   hello world 1234
+  <div>
+    {% if todos %} {% for todo in todos %}
+    <h2>name: {{todo.name}}</h2>
+    <h2>email: {{todo.email}}</h2>
+    <h2>id: {{todo.id}}</h2>
+    {% endfor %} {% else%}
+    <div>No todos</div>
+    {% endif %}
+  </div>
 </html>
