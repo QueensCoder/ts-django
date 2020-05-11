@@ -9,4 +9,11 @@
     <div>No todos</div>
     {% endif %}
   </div>
+  <div>
+    <form method="post">
+      {% csrf_token %} {{form}}
+      <input type="submit" value="OK" />
+      <h2>Data from post {{data}}</h2>
+    </form>
+  </div>
 </html>
