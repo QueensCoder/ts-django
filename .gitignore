@@ -25,6 +25,7 @@ yarn-error.log*
 node_modules
 
 # python ignores
+*__pycache__*
 __pycache__
 *.egg-info
 *.pot
