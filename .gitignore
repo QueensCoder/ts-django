@@ -30,6 +30,7 @@ __pycache__
 *.egg-info
 *.pot
 *.py[co]
+*.pyc
 
 
 
