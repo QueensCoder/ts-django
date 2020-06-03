@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Todos
 from .form import NameForm
+from .models import Todos
 
 
 def test(req):
@@ -16,7 +17,15 @@ def index(req):
 def form(req):
     form = NameForm()
     if req.POST:
-        data = req.POST['your_name']
+        name = req.POST['name']
+        email = req.POST['email']
+        data = {
+            'name': name,
+            'email': email
+        }
+
+        new_todo = Todos(name=name, email=email, description='new description')
+        new_todo.save()
         return render(req, 'new/index.html', {'form': form, 'data': data})
 
     else:

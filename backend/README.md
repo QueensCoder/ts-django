@@ -105,3 +105,21 @@ python manage.py startapp <app name> - to make new app
     insert details
 
     creates a super user that has controll of backend of website
+
+    register model with super user
+    in app go into admin.py
+    import model and then
+
+    admin.site.register(ModelNameHere)
+
+    this allows for table info to be displayed in admin area so admin can manipulate data
+
+### forms
+
+    create form.py file
+
+    from django import forms and then create a form class and pass in forms.Form
+
+    now each variable you add such as name or email can use form.<some field name>
+
+    similar to how the db is designed
